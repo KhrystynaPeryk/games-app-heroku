@@ -1,0 +1,19 @@
+<div class="login">
+    <h2 class="login__title">Sign In</h2><br>  
+    <form autocomplete="off" method="get" #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" action="login.php">    
+        <label>
+            <b>Email</b> 
+        </label><em class="error-message" *ngIf="!email.valid && (email.touched || mouseoverLogin)">Invalid email</em><br>
+        <input ngModel #email="ngModel" type="email" name="email" class="login__form-inputs" id="form-email" placeholder="Email" pattern="^\S+@\S+\.\S+$" required>    
+        <br><br>  
+        <label>
+            <b>Password</b>    
+        </label><em class="error-message" *ngIf="!password.valid && (password.touched || mouseoverLogin)">Required</em><br>
+        <input ngModel #password="ngModel" type="password" name="password" class="login__form-inputs" id="form-password" placeholder="Password" required>    
+        <br><br><br>
+        <span (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false">
+            <button class="login__form-button" type="submit" [disabled]="loginForm.invalid">Sign In</button>
+        </span>   
+        <br><br>    
+    </form>
+</div>

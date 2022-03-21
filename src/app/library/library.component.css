@@ -1,0 +1,12 @@
+.library-section {
+    background-color: #c3e2d4;
+    width: 90%;
+    margin: auto;
+    padding: 5%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    overflow: auto;
+}
+.library-section__games-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}

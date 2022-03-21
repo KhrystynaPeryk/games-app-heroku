@@ -1,0 +1,32 @@
+
+<div class="profile">
+    <h2 class="profile__title">Profile</h2><br>  
+    <form method="get" autocomplete="off" #profileForm="ngForm" (ngSubmit)="save(profileForm.value)" action="login.php">
+        <div [ngClass]="{'error': username.invalid && username.touched}">
+            <label>
+                <b>Username</b> 
+            </label><em class="error-message" *ngIf="!username.valid && username.touched">Minimum length is 5 characters</em><br>
+            <input class="form-control" ngModel #username="ngModel" type="username" name="username" class="profile__form-inputs" id="profile-username" placeholder="Username" minlength="5" required>    
+            <br><br>  
+        </div>
+         
+        <div [ngClass]="{'error': email.invalid && email.touched}">
+            <label>
+                <b>Email</b> 
+            </label><em class="error-message" *ngIf="!email.valid && email.touched">Invalid email</em><br>
+            <input class="form-control" ngModel #email="ngModel" type="email" name="email" class="profile__form-inputs" id="profile-email" placeholder="email" pattern="^\S+@\S+\.\S+$" [(ngModel)]="contact.email" required>    
+            <br><br>
+        </div>
+        
+        <div [ngClass]="{'error': age.invalid && age.touched}">
+            <label>
+                <b>Age</b>    
+            </label><em class="error-message" *ngIf="!age.valid && age.touched">Age can be from 0 to 100</em><br>
+            <input class="form-control" ngModel #age="ngModel" type="number" name="age" class="profile__form-inputs" id="profile-age" placeholder="Age" pattern="^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|100)$" required>    
+            <br><br><br> 
+        </div>
+        
+        <button [disabled]="!profileForm.valid" type="submit" class="profile__form-button">Save</button>     
+        <br><br>    
+    </form>
+</div>

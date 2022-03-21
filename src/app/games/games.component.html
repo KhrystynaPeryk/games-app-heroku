@@ -1,0 +1,31 @@
+<section class="games-section">
+    <h2 class="games-section__title">Games</h2>
+    <form class="games-section__form">
+        <label>
+            <span>Search Games</span> 
+        </label><br>
+        <div>
+            <input [(ngModel)]="searchTerm" #gamesInput="ngModel" type="text" name="friendsInput" id="friends-search" placeholder="Search Games">    
+            <button (click)="searchGames(gamesInput.value)" type="submit">Search</button>   
+        </div>
+    </form>
+    <h2 class="games-section__title">Featured Games: {{searchTerm}}</h2>
+    <div class="games-section__container">
+        <div class="games-section__cards-container">
+            <app-game-card *ngFor="let game of searchedGames" (gameClick)="handleGameClicked($event)" [games]="game"></app-game-card>
+        </div>
+        <div class="games-section__games-controls">
+            <p>Filter by price:</p>
+            <input class="games-section__games-controls-range" ngModel="model.range" #range (ngModelChange)="filterByRange(range.value)" type="range" id="price-range" name="price-range"
+                min="0" max="2">
+            <label for="price-range">Any price</label>
+            <p>Filter by tag:</p>
+            <div class="games-section__games-controls-input-container">
+                <span *ngFor="let item of list">
+                    <input type="checkbox" [(ngModel)]="item.checked" 
+                        (change)="filterByTag(item.tag)">{{ item.tag }}
+                </span>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+<section class="library-card">
+    <div class="library-card__card-header">
+        <h2 class="library-card__card-header-title">{{games.name}}</h2>
+        <p class="library-card__card-header-price">{{games.price}}</p>
+    </div>
+    <div class="library-card__card-body">
+        <p>{{games.description}}</p>
+        <div class="library-card__buttons">
+            <button class="library-card_submit-button" type='submit' (click)="download(games.name)">Download</button>
+            <button lass="library-share-button" type='submit' class='library-card__share-btn' (click)="share(games.name)">Share</button>
+        </div>
+    </div>
+</section>

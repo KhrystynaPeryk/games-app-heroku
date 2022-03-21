@@ -1,0 +1,54 @@
+.library-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 1vh;
+    margin-right: 1vh;
+    width: 40vh;
+    height: 40vh;
+}
+.library-card button {
+    height: 33px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border: none;  
+    border-radius: 3px;
+    background-color: #3d405b;
+    color: #f4f1de;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-color: rgb(124, 141, 173);
+}
+button:hover {
+    background-color: rgb(124, 141, 173);
+    opacity: 0.8;
+}
+.library-card__card-header {
+    background-color: rgb(241, 232, 220);
+    padding: 2%;
+    color: rgb(207, 167, 117);
+}
+.library-card__card-body {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.library-card__card-header-price {
+    text-align: right;
+}
+.library-card__share-btn {
+    background-color: white;
+    color: rgb(124, 141, 173);
+    margin-left: 1%;
+}
+.library-card__card-header-title {
+    margin-bottom: 20%;
+}
+.library-card__buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+.library-card__card-body p {
+    margin-bottom: 3%;
+}

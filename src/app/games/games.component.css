@@ -1,0 +1,62 @@
+.games-section {
+    background-color: #c3e2d4;
+    width: 90%;
+    margin: auto;
+    padding: 5%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    overflow: auto;
+}
+.games-section__form input {
+    width: 89%;
+    height: 30px;
+    margin-right: 1%;
+    border: none;  
+    border-radius: 3px;
+    padding-left: 1%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.games-section__form button {
+    height: 33px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border: none;  
+    border-radius: 3px;
+    background-color: #3d405b;
+    color: #f4f1de;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.games-section__form button:hover {
+    background-color: #3d405b;
+    opacity: 0.8;
+}
+.games-section__form div {
+    display: flex;
+}
+.games-section__container {
+    display: flex;
+}
+.games-section__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.games-section__games-controls {
+    display: flex;
+    flex-direction: column;
+    top: 35%;
+    right: 20%;
+}
+.games-section__games-controls-input-container {
+    display: flex;
+    flex-direction: column;
+}
+.games-section__title {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+.games-section__games-controls p {
+    margin-bottom: 5%;
+}
+.games-section__games-controls label {
+    margin-bottom: 10%;
+    text-align: center;
+}

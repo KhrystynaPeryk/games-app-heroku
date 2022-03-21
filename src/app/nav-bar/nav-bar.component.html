@@ -1,0 +1,17 @@
+<nav class="nav-bar">
+    <ul>
+        <div class="nav-bar__left">
+            <li class="logo" [routerLink]="['/games']" routerLinkActive="active"><fa-icon [icon]="faDiceD20"></fa-icon></li>
+            <li [routerLink]="['/games']" routerLinkActive="active">Games</li>
+            <li [routerLink]="['/library']" routerLinkActive="active">Library</li>
+            <li [routerLink]="['/friends']" routerLinkActive="active">Friends</li>
+            <li [routerLink]="['/profile']" routerLinkActive="active">Profile</li>
+        </div>
+        <div class="nav-bar__right">
+            <li class="nav-bar__button-container" *ngIf="auth.isAuthenticated()">
+                <span class="nav-bar__greeting">Welcome {{auth.currentUser.username}}!</span>
+                <button class="nav-bar__button" (click)="logOut()">Log Out</button>
+            </li>
+        </div>   
+    </ul>
+  </nav>
