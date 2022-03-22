@@ -1,3 +1,7 @@
+Hosted on Heroku.com
+https://games-app-angular.herokuapp.com/
+----------------------------------------------
+
 # GamesApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
