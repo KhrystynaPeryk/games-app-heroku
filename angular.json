@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "games-app": {
+    "games-app-heroku": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "games-app:build:production"
+              "browserTarget": "games-app-heroku:build:production"
             },
             "development": {
-              "browserTarget": "games-app:build:development"
+              "browserTarget": "games-app-heroku:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "games-app:build"
+            "browserTarget": "games-app-heroku:build"
           }
         },
         "test": {
@@ -102,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "games-app"
+  "defaultProject": "games-app-heroku"
 }
